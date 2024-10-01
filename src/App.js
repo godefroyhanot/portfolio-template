@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home } from 'componments/pages/'; 
+import { Home } from './components/pages/'; 
 const App = () => {
   return (
     <div>
