@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import ProjectCard from '../atoms/Containers/ProjectCard'; // Assurez-vous que le chemin correspond
+import {CardRepoGitHub,CouleurBG} from '../atoms/Containers/';
+import { Heading, Hyperlien, Paragraph } from '../atoms/Typo';
 
-const ProjectList = () => {
+
+const ListRepoGitHub = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -15,19 +17,19 @@ const ProjectList = () => {
 
   return (
     <div>
-      <h1>Mes Projets GitHub</h1>
-      <div id="github-projects">
+      <Heading level={1}color="#fff">Mes Projets GitHub</Heading>
+      <CouleurBG color="#1e2124" id="github-projects">
         {projects.map(repo => (
-          <ProjectCard
+          <CardRepoGitHub
             key={repo.id}
             name={repo.name}
             description={repo.description}
             url={repo.html_url}
           />
         ))}
-      </div>
+      </CouleurBG>
     </div>
   );
 };
 
-export default ProjectList;
+export default ListRepoGitHub;

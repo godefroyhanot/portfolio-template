@@ -1,3 +1,3 @@
-import ProjectList from "./ProjectList";
+import ListRepoGitHub from "./ListRepoGitHub";
 
-export default ProjectList;
+export default ListRepoGitHub;

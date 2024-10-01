@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledLink = styled.a`
-  color: ${({ color }) => color || '#008CBA'}; /* Couleur par défaut */
+  color: ${({ color }) => color || '#008CBA'};
   text-decoration: none;
   font-weight: bold;
 
   &:hover {
     text-decoration: underline;
-    color: ${({ hoverColor }) => hoverColor || '#005f73'}; /* Couleur au survol */
+    color: ${({ hoverColor }) => hoverColor || '#005f73'}; 
   }
 `;
 
