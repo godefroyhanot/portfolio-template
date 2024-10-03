@@ -9,7 +9,7 @@ import {
 import { Heading, Paragraph, Hyperlien } from "./components/atoms/Typo";
 import ListRepoGitHub from "./components/molecules/ListRepoGitHub";
 import UsernameChanger from "./components/Settings/UsernameChanger";
-import { GitHubProvider, useGitHub } from "../../context/GithubContext";
+import { GitHubProvider, useGitHub } from "./context/GithubContext";
 
 const App = () => {
   const handleClick = () => {
