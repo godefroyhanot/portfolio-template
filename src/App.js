@@ -1,6 +1,7 @@
 import './App.css';
 import { Home, Projets, Contact } from './components/pages';
 import React, { useState } from "react";
+import { Containers, Typo } from "./components/atoms";
 
 function App() {
 
