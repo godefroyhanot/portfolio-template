@@ -1,3 +1,5 @@
-import ProjectCard from "./ProjectCard";
+import Avatar from "./Avatar";
+import CouleurBG from "./CouleurBG";
+import CardRepoGitHub from "./CardRepoGitHub";
 
-export default ProjectCard;
+export {CardRepoGitHub,CouleurBG,Avatar};
