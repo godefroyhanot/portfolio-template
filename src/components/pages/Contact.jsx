@@ -1,10 +1,12 @@
 import React from "react";
+import { Heading, Paragraph, Hyperlien } from "../atoms/Typo";
+import { BgColor } from "../atoms/Containers";
 
 const Contact = () => {
   return (
-    <div>
-      <h1>Contactez-moi</h1>
-    </div>
+    <BgColor>
+      <Heading>Contactez-moi</Heading>
+    </BgColor>
   );
 };
 

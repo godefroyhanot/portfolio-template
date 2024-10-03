@@ -1,10 +1,12 @@
 import React from "react";
+import { Heading, Paragraph, Hyperlien } from "../atoms/Typo";
+import { BgColor } from "../atoms/Containers";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Bienvenue sur mon Portfolio</h1>
-    </div>
+    <BgColor>
+      <Heading>Mon Portfolio</Heading>;
+    </BgColor>
   );
 };
 

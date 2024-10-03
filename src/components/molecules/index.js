@@ -1,3 +1,4 @@
 import ListRepoGitHub from "./ListRepoGitHub";
+import Menu from "./Menu";
 
-export default ListRepoGitHub;
+export { ListRepoGitHub, Menu };

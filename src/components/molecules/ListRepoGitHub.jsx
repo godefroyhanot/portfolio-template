@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CardRepoGitHub, CouleurBG } from "../atoms/Containers/";
+import { CardRepoGitHub, BgColor } from "../atoms/Containers/";
 import { Heading, Hyperlien, Paragraph } from "../atoms/Typo";
 import { GitHubProvider, useGitHub } from "../../context/GithubContext";
 
@@ -16,10 +16,8 @@ const ListRepoGitHub = () => {
 
   return (
     <div>
-      <Heading level={1} color="#fff">
-        Mes Projets GitHub
-      </Heading>
-      <CouleurBG color="#1e2124" id="github-projects">
+      <Heading level={1}>Mes Projets GitHub</Heading>
+      <BgColor id="github-projects">
         {projects.map((repo) => (
           <CardRepoGitHub
             key={repo.id}
@@ -28,7 +26,7 @@ const ListRepoGitHub = () => {
             url={repo.html_url}
           />
         ))}
-      </CouleurBG>
+      </BgColor>
     </div>
   );
 };

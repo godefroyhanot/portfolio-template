@@ -1,10 +1,14 @@
 import React from "react";
+import { Heading, Paragraph, Hyperlien } from "../atoms/Typo";
+
+import ListRepoGitHub from "../molecules/ListRepoGitHub";
+import { BgColor } from "../atoms/Containers";
 
 const Projets = () => {
   return (
-    <div>
-      <h1>Mes Projets</h1>
-    </div>
+    <BgColor>
+      <ListRepoGitHub />
+    </BgColor>
   );
 };
 

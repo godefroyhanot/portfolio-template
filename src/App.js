@@ -1,39 +1,27 @@
 import { useState } from "react";
+import { ThemeProvider } from "styled-components"; // Import du ThemeProvider de styled-components
 import "./App.css";
 import Button from "./components/atoms/Buttons/Button";
-import {
-  CardRepoGitHub,
-  CouleurBG,
-  Avatar,
-} from "./components/atoms/Containers";
+import { CardRepoGitHub, BgColor, Avatar } from "./components/atoms/Containers";
 import { Heading, Paragraph, Hyperlien } from "./components/atoms/Typo";
-import ListRepoGitHub from "./components/molecules/ListRepoGitHub";
+
 import UsernameChanger from "./components/Settings/UsernameChanger";
-import { GitHubProvider, useGitHub } from "./context/GithubContext";
 import { Home, Projets, Contact } from "./components/pages";
+import Menu from "./components/molecules/Menu";
+import theme from "./components/Settings/Style/theme";
 
 const App = () => {
-  const handleClick = () => {
-    alert("Button clicked!");
-  };
   const [slug, setSlug] = useState("home");
+
   let tableauMenu = [
-    {
-      slug: "home",
-      title: "Accueil",
-      component: <Home />,
-    },
-    {
-      slug: "projets",
-      title: "Projets",
-      component: <Projets />,
-    },
-    {
-      slug: "contact",
-      title: "Contact",
-      component: <Contact />,
-    },
+    { slug: "home", title: "Accueil", component: <Home /> },
+    { slug: "projets", title: "Projets", component: <Projets /> },
+    { slug: "contact", title: "Contact", component: <Contact /> },
   ];
+
+  const changePage = (slug) => {
+    setSlug(slug);
+  };
 
   const displayPage = () => {
     switch (slug) {
@@ -47,23 +35,26 @@ const App = () => {
         return <Home />;
     }
   };
-  return (
-    <CouleurBG color="#1e2124">
-      <Heading color="#FFF">Mon Portfolio</Heading>
-      <Paragraph>Voici un exemple de paragraphe dans mon portfolio.</Paragraph>
 
-      <Hyperlien href="#" color="#7289da">
-        Pls Help Me
-      </Hyperlien>
-      <div className="App">{displayPage()}</div>
-      <Button
-        label="Voir mes projets"
-        onClick={handleClick}
-        className="primary"
-      />
-      <UsernameChanger />
-      <ListRepoGitHub />
-    </CouleurBG>
+  return (
+    <ThemeProvider theme={theme}>
+      <BgColor>
+        <div className="App">
+          <Menu changePage={changePage} configs={tableauMenu} />
+          {displayPage()}
+        </div>
+        <Paragraph>
+          Voici un exemple de paragraphe dans mon portfolio.
+        </Paragraph>
+
+        <Hyperlien href="#">Pls Help Me</Hyperlien>
+        <Button
+          label="Voir mes projets"
+          onClick={() => alert("Button clicked!")}
+          className="primary"
+        />
+      </BgColor>
+    </ThemeProvider>
   );
 };
 

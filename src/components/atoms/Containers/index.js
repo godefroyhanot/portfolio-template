@@ -1,5 +1,6 @@
 import Avatar from "./Avatar";
-import CouleurBG from "./CouleurBG";
+import BgColor from "./BgColor";
 import CardRepoGitHub from "./CardRepoGitHub";
+import MenuBar from "./MenuBar";
 
-export { CardRepoGitHub, CouleurBG, Avatar };
+export { CardRepoGitHub, BgColor, Avatar, MenuBar };
