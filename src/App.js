@@ -24,23 +24,28 @@ function App() {
       },
     ];
 
-    // Déplace cette fonction à l'intérieur du composant App
+    // Fonction pour afficher la page en fonction du slug
     const displayPage = () => {
-      switch (slug) {
-        case "home":
-          return <Home />;
-        case "projets":
-          return <Projets />;
-        case "contact":
-          return <Contact />;
-        default:
-          return <Home />;
-      }
+      const currentPage = tableauMenu.find(page => page.slug === slug);
+      return currentPage ? currentPage.component : <Home />;
     };
 
     return (
       <div className="App">
-        {/* Appelle displayPage pour rendre la page */}
+        {/* Barre de menu */}
+        <nav>
+          <ul>
+            {tableauMenu.map((item) => (
+              <li key={item.slug}>
+                <button onClick={() => setSlug(item.slug)}>
+                  {item.title}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Affichage du contenu de la page */}
         {displayPage()}
       </div>
     );
