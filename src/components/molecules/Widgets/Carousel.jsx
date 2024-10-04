@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Containers } from '../../atoms'
-const Carousel = ({ content = [], infinite }) => {
+const Carousel = ({ content = [], infinite, ...props }) => {
     const [step, setStep] = useState(0)
 
     const addStep = () => {
@@ -26,11 +26,10 @@ const Carousel = ({ content = [], infinite }) => {
         }
     }
     return (
-        <Containers.Carousel handleLeftCarouselElt={(<>[Precedent]</>)}
-            handleRightCarouselElt={(<>[Suivant]</>)}
+        <Containers.Carousel
             handleAdd={addStep}
             handleWithdraw={withdrawStep}
-            handleCarouselElt={<>[.]</>}
+            {...props}
         >
             {content[step]}
         </Containers.Carousel>

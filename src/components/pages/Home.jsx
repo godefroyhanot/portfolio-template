@@ -8,6 +8,9 @@ const Home = () => {
     <BgColor>
       <Heading>Mon Portfolio</Heading>
       <Carousel
+        handleLeftCarouselElt={(<>[Precedent]</>)}
+        handleRightCarouselElt={(<>[Suivant]</>)}
+        handleCarouselElt={<>[.]</>}
         content={[
           (<div>Hello</div>),
           (<div>yo</div>),
