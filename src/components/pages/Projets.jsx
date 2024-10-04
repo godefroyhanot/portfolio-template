@@ -1,13 +1,15 @@
 import React from "react";
 import { AddProject, ProjectList } from "../molecules";
+import { Heading, Paragraph, Hyperlien } from "../atoms/Typo";
+import { BgColor } from "../atoms/Containers";
 
 const Projets = () => {
   return (
-    <div className="Projets">
-      <h1>Mes projets</h1>
+    <BgColor className="Projets">
+      <Heading>Mes projets</Heading>
       <AddProject />
       <ProjectList />
-    </div>
+    </BgColor>
   );
 };
 

@@ -5,7 +5,7 @@ import { BgColor } from "../atoms/Containers";
 const Home = () => {
   return (
     <BgColor>
-      <Heading>Mon Portfolio</Heading>;
+      <Heading>Mon Portfolio</Heading>
     </BgColor>
   );
 };

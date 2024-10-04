@@ -2,8 +2,8 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import "./App.css";
 import Button from "./components/atoms/Buttons/Button";
-import { CardRepoGitHub, BgColor, Avatar } from "./components/atoms/Containers";
-import { Heading, Paragraph, Hyperlien } from "./components/atoms/Typo";
+import { BgColor } from "./components/atoms/Containers";
+import { Paragraph, Hyperlien } from "./components/atoms/Typo";
 import { Home, Projets, Contact, Github } from "./components/pages";
 import Menu from "./components/molecules/Menu";
 import theme from "./components/Settings/Style/theme";
@@ -42,16 +42,6 @@ const App = () => {
           <Menu changePage={changePage} configs={tableauMenu} />
           {displayPage()}
         </div>
-        <Paragraph>
-          Voici un exemple de paragraphe dans mon portfolio.
-        </Paragraph>
-
-        <Hyperlien href="#">Pls Help Me</Hyperlien>
-        <Button
-          label="Voir mes projets"
-          onClick={() => alert("Button clicked!")}
-          className="primary"
-        />
       </BgColor>
     </ThemeProvider>
   );
