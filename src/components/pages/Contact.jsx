@@ -1,13 +1,13 @@
-
 import React from "react";
 import { Heading, Paragraph, Hyperlien } from "../atoms/Typo";
 import { BgColor } from "../atoms/Containers";
 
-const Home = () => {
+const Contact = () => {
   return (
     <BgColor>
-      <Heading>Mon Portfolio</Heading>
+      <Heading>Contactez-moi</Heading>
     </BgColor>
   );
 };
-export default Home;
+
+export default Contact;
