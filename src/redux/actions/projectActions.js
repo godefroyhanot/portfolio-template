@@ -7,3 +7,8 @@ export const removeProject = (id) => ({
   type: "REMOVE_PROJECT",
   payload: id,
 });
+
+export const updateProject = (project) => ({
+  type: "UPDATE_PROJECT",
+  payload: project,
+});
