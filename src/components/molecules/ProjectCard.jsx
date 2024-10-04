@@ -4,6 +4,9 @@ import {
   removeProject,
   updateProject,
 } from "../../redux/actions/projectActions";
+import { BgColor } from "../atoms/Containers";
+import Button from "../atoms/Buttons/Button";
+import { Heading, Paragraph } from "../atoms/Typo";
 
 const ProjectCard = ({ project }) => {
   const dispatch = useDispatch();
@@ -45,7 +48,7 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <div className="project-card">
+    <BgColor className="project-card">
       {isEditing ? (
         <>
           <input
@@ -69,24 +72,26 @@ const ProjectCard = ({ project }) => {
               style={{ width: "200px", height: "auto" }}
             />
           )}
-          <button onClick={handleSave}>Sauvegarder</button>
+          <Button label="Save Projet" onClick={handleSave}></Button>
         </>
       ) : (
         <>
-          <h2>{project.title}</h2>
-          <p>{project.description}</p>
+          <Heading level={2}>{project.title}</Heading>
+          <Paragraph>{project.description}</Paragraph>
           {project.image && (
             <img
               src={project.image}
               alt={project.title}
               style={{ width: "200px", height: "auto" }}
             />
-          )}
-          <button onClick={handleEdit}>Modifier</button>
+          )}{" "}
+          <div>
+            <Button label="Edit Projet" onClick={handleEdit}></Button>
+          </div>
         </>
       )}
-      <button onClick={handleRemove}>Supprimer</button>
-    </div>
+      <Button label="Delete Projet" onClick={handleRemove}></Button>
+    </BgColor>
   );
 };
 
