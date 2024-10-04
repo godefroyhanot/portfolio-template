@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Mon Portfolio React avec l'API GitHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Ce projet web est construit avec React, puis avec l'API REST intégrée pour afficher en temps réel les projets GitHub sur le portfolio.
 
-In the project directory, you can run:
+## Fonctionnalités
+API REST : Consultez directement les projets disponibles sur votre compte GitHub.
 
-### `npm start`
+Détails du projet : Cliquez sur un projet pour voir plus d'informations (description, techno etc...).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Adaptation : L'application est entièrement responsive et s'adapte à différents types d'écrans.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies utilisées
+React : Framework JavaScript pour construire l'interface utilisateur.
 
-### `npm test`
+React Router : Gère la navigation entre différentes pages de l'application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+CSS/SCSS : Pour le design et la mise en page.
 
-### `npm run build`
+API GitHub : Permet d'afficher les projets directement depuis mon compte GitHub.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
+Clonez le dépôt :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```git clone https://github.com/ClementCastex/portfolio-template.git```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Accédez au dossier du projet :
 
-### `npm run eject`
+```cd portfolio-template```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Installez les dépendances :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```npm install```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Copier le code :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```REACT_APP_GITHUB_TOKEN=your_github_token```
 
-## Learn More
+Lancez l'application :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Copier le code :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```npm start```
 
-### Code Splitting
+## Utilisation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Après avoir démarré l'application, allez dans l'onglet "projet" pour voir liste de vos projets GitHub récupérés via l'API.
 
-### Analyzing the Bundle Size
+Consultez la description et cliquez sur le projet pour vous rediriger sur le site officiel de github.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contribuer
+Les contributions sont les bienvenues ! Si vous souhaitez améliorer cette application, voici comment vous pouvez commencer :
 
-### Making a Progressive Web App
+ - Forker ce dépôt.
+- Créer une nouvelle branche (```git checkout -b feature/amélioration```).
+- Faire des modifications et les valider (```git commit -m 'Ajout d'une nouvelle fonctionnalité'```).
+- Pousser vers la branche (```git push origin feature/amélioration```).
+- Ouvrir une Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Auteurs
+Emo Lewis - LewisEMO
+Castex Clément - ClementCastex
+Godefroy Hanot - godefroyhanot
 
-### Advanced Configuration
+## License
+Ce projet est sous licence MIT 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![React](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
