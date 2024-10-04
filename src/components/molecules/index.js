@@ -1,5 +1,5 @@
-import ListRepoGitHub from "./ListRepoGitHub";
 
 import Menu from "./Menu";
-import * as Widgets from './Widgets';
-export { ListRepoGitHub, Menu, Widgets };
+import AddProject from "./AddProject";
+import ProjectList from "./ProjectList";
+export { ListRepoGitHub, Menu, ProjectList, AddProject };

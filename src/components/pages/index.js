@@ -1,5 +1,6 @@
 import Home from "./Home";
-import Projets from "./Projets";
+import Github from "./Github";
 import Contact from "./Contact";
+import Projets from "./Projets";
 
-export { Home, Projets, Contact };
+export { Home, Github, Contact, Projets };
