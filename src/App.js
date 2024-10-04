@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import "./App.css";
-import Button from "./components/atoms/Buttons/Button";
 import { BgColor } from "./components/atoms/Containers";
-import { Paragraph, Hyperlien } from "./components/atoms/Typo";
 import { Home, Projets, Contact, Github } from "./components/pages";
 import Menu from "./components/molecules/Menu";
 import theme from "./components/Settings/Style/theme";
@@ -30,6 +28,8 @@ const App = () => {
         return <Projets />;
       case "contact":
         return <Contact />;
+      case "github":
+        return <Github />;
       default:
         return <Home />;
     }
