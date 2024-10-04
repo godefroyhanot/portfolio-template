@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { ThemeProvider } from "styled-components"; // Import du ThemeProvider de styled-components
+import { ThemeProvider } from "styled-components";
 import "./App.css";
 import Button from "./components/atoms/Buttons/Button";
 import { CardRepoGitHub, BgColor, Avatar } from "./components/atoms/Containers";
 import { Heading, Paragraph, Hyperlien } from "./components/atoms/Typo";
-
-import UsernameChanger from "./components/Settings/UsernameChanger";
-import { Home, Projets, Contact } from "./components/pages";
+import { Home, Projets, Contact, Github } from "./components/pages";
 import Menu from "./components/molecules/Menu";
 import theme from "./components/Settings/Style/theme";
 
@@ -17,6 +15,7 @@ const App = () => {
     { slug: "home", title: "Accueil", component: <Home /> },
     { slug: "projets", title: "Projets", component: <Projets /> },
     { slug: "contact", title: "Contact", component: <Contact /> },
+    { slug: "github", title: "Github", component: <Github /> },
   ];
 
   const changePage = (slug) => {
