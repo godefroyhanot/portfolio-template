@@ -2,6 +2,8 @@ import './App.css';
 import { Home, Projets, Contact } from './components/pages';
 import React, { useState } from "react";
 import { Containers, Typo } from "./components/atoms";
+import Menu from "./components/molecules/Menu";
+
 
 function App() {
 
@@ -24,28 +26,15 @@ function App() {
       },
     ];
 
-    // Fonction pour afficher la page en fonction du slug
+    // Fonction displayPage déplacée à l'intérieur du composant App
     const displayPage = () => {
-      const currentPage = tableauMenu.find(page => page.slug === slug);
-      return currentPage ? currentPage.component : <Home />;
+      const foundPage = tableauMenu.find(menuItem => menuItem.slug === slug);
+      return foundPage ? foundPage.component : <Home />;
     };
 
     return (
       <div className="App">
-        {/* Barre de menu */}
-        <nav>
-          <ul>
-            {tableauMenu.map((item) => (
-              <li key={item.slug}>
-                <button onClick={() => setSlug(item.slug)}>
-                  {item.title}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Affichage du contenu de la page */}
+        {/* Appelle displayPage pour rendre la page */}
         {displayPage()}
       </div>
     );
